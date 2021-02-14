@@ -243,6 +243,32 @@ menu:
 			goto menu;
 		}
 	}
-	system("pause");
-	return 0;
+
+	//історія ігор
+	if (choose_menu == "History")
+	{
+		fs.open(path, fstream::in);
+
+		while (!fs.eof())
+			{
+				string msg = "";
+				getline(fs, msg);
+				cout << msg << endl;
+			}
+	fs.close();
+
+	cout << "Go back? (y|n)";
+	cin >> comeback;
+
+	if (comeback == "y")
+		{
+			system("cls");
+			goto menu;
+		}
+		else if (comeback == "n")
+			{
+				return 0;
+			}
+	}
+	
 }
