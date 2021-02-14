@@ -270,5 +270,12 @@ menu:
 				return 0;
 			}
 	}
+
+	//вихід з гри
+	if (choose_menu == "Exit")
+	{
+		cout << "Goodbye, my friend!";
+			return 0;
+	}
 	
 }
