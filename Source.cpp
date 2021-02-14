@@ -218,4 +218,31 @@ menu:
 		}
 	}
 
+	//інформація про гру
+	if (choose_menu == "About")
+	{
+		cout << "Two teams are created, in which 5 players are randomly selected." << endl;
+		cout << "Each player is randomly assigned one of the available characters.HP and" << endl;
+		cout << "Damage per team is calculated by summing the corresponding scores of the" << endl;
+		cout << "team heroes. The total number of HP and Damage per team is calculated by" << endl;
+		cout << "summing the corresponding scores of the team heroes. The winning team is" << endl;
+		cout << "determined: The Damage of the opposing team is subtracted from the HP team," << endl;
+		cout << "after which the team with the most HP left is considered the winner." << endl << endl;
+		
+		cout << "Go back? (y)";
+		cin >> comeback;
+
+		while (comeback != "y")
+		{
+			cout << "Error!!!" << endl;
+			cin >> comeback;
+		}
+		if (comeback == "y")
+		{
+			system("cls");
+			goto menu;
+		}
+	}
+	system("pause");
+	return 0;
 }
